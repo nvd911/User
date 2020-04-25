@@ -1,0 +1,22 @@
+extends ../layouts/common.pug
+block content
+    h1 List Name
+
+    table.table
+            thead
+              tr
+                th(scope='col') Tên
+                th(scope='col') Số Điện Thoại
+                th(scope='col') Email
+
+
+            tbody
+                 each item in user
+                    tr
+                        td= item.name
+                        td= item.phone
+                        td= item.email
+                    tr
+                        td= item.name
+                        td= item.phone
+                        td= item.emai

@@ -1,0 +1,23 @@
+extends ../layouts/common.pug
+block content
+    if error
+        each item in error
+            .alert.alert-dark(role='alert')= item
+
+    //- if !value.name
+    //-     ""
+
+    .container
+        h1 New List
+        form(action="/user/create", method='POST', class="form-group" )
+            label(for="name") Name
+            input(id="name" type="text", name='name', class='form-control', value=value ? value.name : '')
+
+            label(for="name") Phone
+            input(id="name" type="text", name='phone', class='form-control', value=value ? value.phone : '')
+
+
+            label(for="name") Email
+            input(id="name" type="text", name='email', class='form-control', value=value ? value.phone : '')
+
+            button(class="btn btn-primary") Create
